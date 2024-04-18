@@ -16,7 +16,7 @@ Using the data of oslo city bikes (https://oslobysykkel.no/en/open-data), we wan
 
 **Get started**
 
-- [ ] Download data
+- [x] Download data
   - One file per month
   - One file per year
   - One file for all data ()
