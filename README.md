@@ -20,7 +20,7 @@ Using the data of oslo city bikes (https://oslobysykkel.no/en/open-data), we wan
   - One file per month
   - One file per year
   - One file for all data ()
-- [ ] Code to transform data to GDF
+- [x] Code to transform data to GDF
   - One GDF for all the stations (points)
   - One GDF for all rides (LineStrings)
 
