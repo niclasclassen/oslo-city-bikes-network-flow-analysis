@@ -3,7 +3,7 @@ import pandas as pd
 from shapely.geometry import LineString
 
 
-def create_stations_gdf(df, crs=4326):
+def create_stations_gdf(df: pd.DataFrame, crs_out: int = 3857) -> gpd.GeoDataFrame:
     # Create unique dataframes for start and end stations
     start_stations = df[
         [
@@ -55,12 +55,12 @@ def create_stations_gdf(df, crs=4326):
     gdf_stations = gpd.GeoDataFrame(
         stations,
         geometry=gpd.points_from_xy(stations.longitude, stations.latitude),
-        crs=crs,
+        crs=crs_out,
     )
     return gdf_stations
 
 
-def create_rides_gdf(df, crs=4326):
+def create_rides_gdf(df: pd.DataFrame, crs_out: int = 3857) -> gpd.GeoDataFrame:
     # Create a new DataFrame with necessary columns
     df_rides = df[
         [
@@ -94,5 +94,23 @@ def create_rides_gdf(df, crs=4326):
     )
 
     # Create GeoDataFrame
-    gdf_rides = gpd.GeoDataFrame(df_rides, geometry="geometry", crs=crs)
+    gdf_rides = gpd.GeoDataFrame(df_rides, geometry="geometry", crs=crs_out)
     return gdf_rides
+
+
+def create_oslo_districts_gdf(
+    data_path: str = "data/Oslo_Kommuner.geojson",
+    crs_in: int = 32633,
+    crs_out: int = 3857,
+) -> gpd.GeoDataFrame:
+    gdf_oslo_kommuner = gpd.read_file(data_path)
+    # Set the correct CRS
+    gdf_oslo_kommuner.set_crs(crs_in, inplace=True, allow_override=True)
+
+    # Reproject the data
+    gdf_oslo_kommuner = gdf_oslo_kommuner.to_crs(epsg=crs_out)
+
+    # rename columns
+    gdf_oslo_kommuner = gdf_oslo_kommuner.rename(columns={"bydelnavn": "district"})
+
+    return gdf_oslo_kommuner
