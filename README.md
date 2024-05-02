@@ -26,14 +26,19 @@ Using the data of oslo city bikes (https://oslobysykkel.no/en/open-data), we wan
 
 **Analysis**
 
-- [ ] General flow between stations
+- [x] General flow between stations
 - [ ] Differences between times during the day/months/years
-- [ ] Differences between weekdays and weekends
-- [ ] How long people rent a bike (Niclas)
+- [x] Differences between weekdays and weekends
+- [x] How long people rent a bike (Niclas)
 - [ ] Distribution of bike usage over time
-- [ ] Do people mainly leave or arrive at some stations
-- [ ] Growth of station network over time (Manuel)
-- [ ] Flow changes with expanding network
+- [x] Do people mainly leave or arrive at some stations
+- [x] Growth of station network over time (Manuel)
+- [x] Flow changes with expanding network
+- [ ] Analasys based on lecture material
+
+**Structuring**
+- [ ] Stucture/Clean code
+- [ ] Order of analysis
 
 **Report**
 
