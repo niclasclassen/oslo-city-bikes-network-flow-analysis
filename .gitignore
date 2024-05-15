@@ -1,4 +1,5 @@
 .venv
-/data
+/data/*.csv
 *DS_Store
 /cache
+.env
