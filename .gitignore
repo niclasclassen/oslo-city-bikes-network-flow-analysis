@@ -3,4 +3,4 @@
 *DS_Store
 /cache
 .env
-__pycache__
+/__pycache__
