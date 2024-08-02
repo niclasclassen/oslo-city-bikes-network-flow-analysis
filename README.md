@@ -1,11 +1,3 @@
-# Project Title
+# Flow analysis of the Oslo city bikes network
 
-TBD (July 2024)
-
-## Description
-
-TBD (July 2024)
-
-## Usage
-
-TBD (July 2024)
+**Summary**: For this project we investigate usage patterns in the network, flow between stations, correlations in the station network, and identify potential locations for new stations. Here we show that traffic flow is mostly focused around the city centre, which is also supported by clustering of stations with a lot of traffic in the central districts. Stations that are located on the outskirts of the city have less traffic. Usage of the network varies between weekdays and the weekend, which might be attributed to people using bikes for their work commute. Our proposed locations for new stations increase density in the network, to make bikes more accessible to a higher number of people. A report of our results can be found [here](report.pdf) and the code for the project can be found [here](main.ipynb). Both of these parts also contain more information about the background of the project, the data used, and the methods applied.
